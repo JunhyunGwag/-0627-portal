@@ -1,0 +1,44 @@
+.app-footer {
+  padding: 32px 16px;
+  background-color: var(--bg-layer-basement);
+  border-top: 1px solid var(--stroke-neutral-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-link-btn {
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: var(--fg-neutral-muted);
+}
+
+.footer-link-btn:hover {
+  color: var(--fg-neutral);
+}
+
+.footer-divider {
+  color: var(--stroke-neutral-weak);
+  font-size: 10px;
+}
+
+.footer-info {
+  color: var(--fg-placeholder);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.footer-info p {
+  margin: 0;
+}
