@@ -39,29 +39,10 @@ export default function Admin() {
             placeholder="비밀번호를 입력하세요"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            style={{
-              padding: '12px',
-              borderRadius: '8px',
-              border: `1px solid var(--stroke-neutral-weak)`,
-              backgroundColor: 'var(--bg-layer-fill)',
-              color: 'var(--fg-neutral)',
-              fontSize: '16px'
-            }}
+            className="input-field"
           />
-          {error && <p className="text-caption" style={{ color: 'var(--seed-color-red-700)' }}>비밀번호가 올바르지 않습니다. 다시 확인해 주세요.</p>}
-          <button 
-            type="submit"
-            style={{
-              padding: '16px',
-              backgroundColor: 'var(--seed-color-carrot-600)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '12px',
-              fontSize: '16px',
-              fontWeight: 700,
-              cursor: 'pointer'
-            }}
-          >
+          {error && <p className="text-caption" style={{ color: 'var(--fg-critical)' }}>비밀번호가 올바르지 않습니다. 다시 확인해 주세요.</p>}
+          <button type="submit" className="btn-primary">
             확인
           </button>
         </form>
@@ -70,10 +51,10 @@ export default function Admin() {
   }
 
   return (
-    <div className="gutter" style={{ paddingTop: '16px' }}>
+    <div className="gutter" style={{ paddingTop: '24px', paddingBottom: '24px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <h2 className="text-heading-large">선생님 공간</h2>
-        <button onClick={handleLogout} style={{ background: 'none', border: 'none', color: 'var(--seed-color-carrot-600)', cursor: 'pointer', padding: '8px' }}>
+        <button onClick={handleLogout} style={{ background: 'none', border: 'none', color: 'var(--seed-color-carrot-600)', cursor: 'pointer', padding: '8px', fontWeight: 500 }}>
           로그아웃
         </button>
       </div>

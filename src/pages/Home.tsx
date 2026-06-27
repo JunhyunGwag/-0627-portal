@@ -8,14 +8,14 @@ export default function Home() {
       {/* Welcome Section */}
       <section>
         <h2 className="text-display-large" style={{ marginBottom: '8px' }}>5학년 3반 학습포털</h2>
-        <p className="text-body">오늘 하루도 활기차게 시작해 볼까요?</p>
+        <p className="text-body-small">오늘 하루도 활기차게 시작해 볼까요?</p>
       </section>
 
       {/* Quick Menu Cards */}
       <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
         
         {/* Notice Card */}
-        <Link to="/notice" style={{ display: 'block', backgroundColor: 'var(--bg-layer-default)', padding: '20px', borderRadius: '12px', border: '1px solid var(--stroke-neutral-subtle)', boxShadow: 'var(--shadow-s1)' }}>
+        <Link to="/notice" className="card card-featured">
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
             <div style={{ padding: '10px', backgroundColor: 'var(--seed-color-carrot-100)', borderRadius: '999px', color: 'var(--seed-color-carrot-600)' }}>
               <Bell size={24} />
@@ -26,7 +26,7 @@ export default function Home() {
         </Link>
 
         {/* Bookmark Card */}
-        <Link to="/bookmark" style={{ display: 'block', backgroundColor: 'var(--bg-layer-default)', padding: '20px', borderRadius: '12px', border: '1px solid var(--stroke-neutral-subtle)', boxShadow: 'var(--shadow-s1)' }}>
+        <Link to="/bookmark" className="card card-featured">
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
             <div style={{ padding: '10px', backgroundColor: 'var(--seed-color-carrot-100)', borderRadius: '999px', color: 'var(--seed-color-carrot-600)' }}>
               <Bookmark size={24} />
@@ -37,7 +37,7 @@ export default function Home() {
         </Link>
 
         {/* Apps Card */}
-        <Link to="/apps" style={{ display: 'block', backgroundColor: 'var(--bg-layer-default)', padding: '20px', borderRadius: '12px', border: '1px solid var(--stroke-neutral-subtle)', boxShadow: 'var(--shadow-s1)' }}>
+        <Link to="/apps" className="card card-featured">
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
             <div style={{ padding: '10px', backgroundColor: 'var(--seed-color-carrot-100)', borderRadius: '999px', color: 'var(--seed-color-carrot-600)' }}>
               <LayoutGrid size={24} />
