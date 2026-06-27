@@ -28,7 +28,6 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  max-width: 640px;
   height: 64px;
   background-color: var(--bg-layer-default);
   border-top: 1px solid var(--stroke-neutral-subtle);
