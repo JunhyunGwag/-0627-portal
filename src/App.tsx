@@ -1,5 +1,6 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import Home from './pages/Home';
 import Notice from './pages/Notice';
 import Bookmark from './pages/Bookmark';
 import Apps from './pages/Apps';
@@ -11,7 +12,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Navigate to="/notice" replace />} />
+          <Route index element={<Home />} />
           <Route path="notice" element={<Notice />} />
           <Route path="bookmark" element={<Bookmark />} />
           <Route path="apps" element={<Apps />} />

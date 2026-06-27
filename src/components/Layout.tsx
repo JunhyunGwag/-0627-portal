@@ -1,5 +1,5 @@
 import { Outlet, NavLink } from 'react-router-dom';
-import { Bell, Bookmark as BookmarkIcon, LayoutGrid, Settings } from 'lucide-react';
+import { Home as HomeIcon, Bell, Bookmark as BookmarkIcon, LayoutGrid, Settings } from 'lucide-react';
 import './Layout.css';
 
 const Layout = () => {
@@ -14,6 +14,10 @@ const Layout = () => {
       </main>
 
       <nav className="bottom-tab-bar">
+        <NavLink to="/" className={({ isActive }: { isActive: boolean }) => `tab-item ${isActive ? 'active' : ''}`} end>
+          <HomeIcon size={24} />
+          <span className="text-caption">홈</span>
+        </NavLink>
         <NavLink to="/notice" className={({ isActive }: { isActive: boolean }) => `tab-item ${isActive ? 'active' : ''}`}>
           <Bell size={24} />
           <span className="text-caption">공지사항</span>
