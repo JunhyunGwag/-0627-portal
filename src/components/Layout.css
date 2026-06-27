@@ -1,0 +1,59 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.app-header {
+  height: 56px;
+  background-color: var(--bg-layer-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--stroke-neutral-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app-main {
+  flex: 1;
+  overflow-y: auto;
+  background-color: var(--bg-layer-default);
+  padding-bottom: 72px; /* For bottom bar */
+}
+
+.bottom-tab-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 640px;
+  height: 64px;
+  background-color: var(--bg-layer-default);
+  border-top: 1px solid var(--stroke-neutral-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 10;
+}
+
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: var(--fg-neutral-subtle);
+  flex: 1;
+  height: 100%;
+}
+
+.tab-item.active {
+  color: var(--seed-color-carrot-600);
+}
+
+.tab-item.active .text-caption {
+  color: var(--seed-color-carrot-600);
+  font-weight: 500;
+}
