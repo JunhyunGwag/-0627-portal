@@ -14,7 +14,7 @@ export default function Admin() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === '3700') {
+    if (password === import.meta.env.VITE_ADMIN_PASSWORD) {
       localStorage.setItem('admin_auth', 'true');
       setIsAuthenticated(true);
       setError(false);
@@ -53,7 +53,7 @@ export default function Admin() {
   return (
     <div className="gutter" style={{ paddingTop: '24px', paddingBottom: '24px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <h2 className="text-heading-large">선생님 공간</h2>
+        <h2 className="text-heading-large">선생님 마당</h2>
         <button onClick={handleLogout} style={{ background: 'none', border: 'none', color: 'var(--seed-color-carrot-600)', cursor: 'pointer', padding: '8px', fontWeight: 500 }}>
           로그아웃
         </button>

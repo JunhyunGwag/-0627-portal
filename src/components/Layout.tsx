@@ -24,7 +24,7 @@ const Layout = () => {
             <span className="nav-text">학습앱</span>
           </NavLink>
           <NavLink to="/admin" className={({ isActive }: { isActive: boolean }) => `nav-item ${isActive ? 'active' : ''}`}>
-            <span className="nav-text">선생님</span>
+            <span className="nav-text">선생님 마당</span>
           </NavLink>
         </nav>
       </header>
