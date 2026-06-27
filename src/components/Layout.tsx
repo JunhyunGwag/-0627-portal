@@ -14,19 +14,19 @@ const Layout = () => {
       </main>
 
       <nav className="bottom-tab-bar">
-        <NavLink to="/notice" className={({ isActive }) => `tab-item ${isActive ? 'active' : ''}`}>
+        <NavLink to="/notice" className={({ isActive }: { isActive: boolean }) => `tab-item ${isActive ? 'active' : ''}`}>
           <Bell size={24} />
           <span className="text-caption">공지사항</span>
         </NavLink>
-        <NavLink to="/bookmark" className={({ isActive }) => `tab-item ${isActive ? 'active' : ''}`}>
+        <NavLink to="/bookmark" className={({ isActive }: { isActive: boolean }) => `tab-item ${isActive ? 'active' : ''}`}>
           <BookmarkIcon size={24} />
           <span className="text-caption">웹사이트</span>
         </NavLink>
-        <NavLink to="/apps" className={({ isActive }) => `tab-item ${isActive ? 'active' : ''}`}>
+        <NavLink to="/apps" className={({ isActive }: { isActive: boolean }) => `tab-item ${isActive ? 'active' : ''}`}>
           <LayoutGrid size={24} />
           <span className="text-caption">학습앱</span>
         </NavLink>
-        <NavLink to="/admin" className={({ isActive }) => `tab-item ${isActive ? 'active' : ''}`}>
+        <NavLink to="/admin" className={({ isActive }: { isActive: boolean }) => `tab-item ${isActive ? 'active' : ''}`}>
           <Settings size={24} />
           <span className="text-caption">선생님</span>
         </NavLink>
